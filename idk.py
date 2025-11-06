@@ -30,19 +30,19 @@ def szamkategoria(szam):
             print("negetiv szam")
 
 
-# def szoelemzo(szoveg):
-#     maganhangzok = ["a", "á", "e", "é", "i", "í", "o", "ó", "ö", "ő", "u", "ú", "ü", "ű"]
-#     maganhangzok_szama = 0
-#     massalhangzok_szama = 0
+def szoelemzo(szoveg):
+    maganhangzok = ["a", "á", "e", "é", "i", "í", "o", "ó", "ö", "ő", "u", "ú", "ü", "ű"]
+    maganhangzok_szama = 0
+    massalhangzok_szama = 0
 
-#     for i in szoveg: #i akarmi lehet, a "szoveg" is
-#         if( i= " "):
-#             if(i in maganhangzok):
-#                 maganhangzok_szama += 1
-#             else:
-#                 massalhangzok_szama += 1
+    for i in szoveg: #i akarmi lehet, a "szoveg" is
+        if(i != " "):
+            if(i in maganhangzok):
+                maganhangzok_szama += 1
+            else:
+                massalhangzok_szama += 1
 
-#     print(f"Maganhangozk {maganhangzok_szama} Mássalhanzók {massalhangzok_szama}")
+    print(f"Maganhangozk {maganhangzok_szama} Mássalhanzók {massalhangzok_szama}")
 
 #Feladat 1.
 
@@ -242,22 +242,15 @@ def kisproba():
 
     ablak.mainloop()
 
-def teszt():
-    allat = ["Kutya", "Macska", "Hörcsög"]
-    sz = input("Adj meg egy számot 0-999 között: ")
-    
-    # Ellenőrizzük, hogy a szám hossza 1, 2 vagy 3
-    if len(sz) == 1:
-        print(allat[0])  # "Kutya"
-    elif len(sz) == 2:
-        print(allat[1])  # "Macska"
-    elif len(sz) == 3:
-        print(allat[2])  # "Hörcsög"
-    else:
-        print("Nem megfelelő szám")
+def nmtom():
+     r = random.randint(0,999)
+     r2 = random.randint(0,999)
+     sz = int(input("adj meg egy szamot"))
+     print(r,"+",r2,"+",sz,"a szamok osszege =", r+r2+sz)
 
-# Teszteld a függvényt
-teszt()
+
+        
+
 
 
 
@@ -269,6 +262,7 @@ teszt()
     # t = ["Laci","Akos","Cumler"]
     # for i in range( len(t)):
     #     print("Szia " + t[i])
+
 
 def main():
     # randomanimal()
@@ -296,5 +290,6 @@ def main():
     #  palindrom()
     # maybegambling()
     # kisproba()
-    teszt()
+    # nmtom()
+    nmtom2()
 main()
